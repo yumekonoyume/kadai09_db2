@@ -1,0 +1,165 @@
+/* 全体の設定 */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* ヘッダーのスタイル */
+header {
+    background-color: #3b5323;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    background-color: #3b5323;
+    border: none;
+}
+
+.navbar-header .navbar-brand {
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.navbar-header .navbar-brand:hover {
+    color: #d1e7dd;
+}
+
+/* ソートボタンのスタイル */
+.sort-buttons {
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    background-color: #f4f4f4;
+    padding: 10px;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ボタン風のリンクスタイル */
+.sort-buttons .btn {
+    padding: 8px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #6bc2b9; /* 爽やかなミントグリーン */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.sort-buttons .btn:hover {
+    background-color: #5aa59d; /* ホバー時の色変更 */
+}
+
+/* メインコンテンツのスタイル */
+.container {
+    margin-top: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* メンバー一覧表示カードのスタイル */
+.member-card {
+    background: linear-gradient(135deg, #f9f9f7, #d7f9f1);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column; /* 縦方向に変更 */
+    align-items: center; /* 画像とテキストを中央に配置 */
+    width: 32%; /* PCで3列並べる */
+}
+
+/* プロフィール画像のスタイル */
+.member-card img {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 8px;
+    margin-bottom: 20px; /* 画像の下にスペースを追加 */
+}
+
+/* メンバー詳細のテキスト */
+.member-details {
+    flex-grow: 1;
+    text-align: left; /* テキストは左揃えのまま */
+    width: 100%; /* テキストの幅をカード全体に */
+}
+
+/* 他のスタイルはそのまま */
+.member-header h3 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.member-header p.furigana {
+    margin: 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* 見出しのスタイル */
+.member-bio-heading {
+    background-color: #968c84;
+    color: white;
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 0.7em;
+}
+
+.member-bio {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.member-footer {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #999;
+}
+
+.member-card .btn {
+    margin: 5px;
+}
+
+/* タブレット対応: 画面幅が768px以下の場合に2人並べる */
+@media (max-width: 768px) {
+    .member-card {
+        width: 48%;
+    }
+}
+
+/* スマホ対応: 画面幅が480px以下の場合に1人ずつ表示 */
+@media (max-width: 480px) {
+    .member-card {
+        width: 100%;
+    }
+
+    .member-card img {
+        margin-bottom: 10px;
+    }
+}
